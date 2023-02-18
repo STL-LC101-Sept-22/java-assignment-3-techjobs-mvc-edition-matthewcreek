@@ -30,27 +30,27 @@
     <th:block th:each="job : ${jobs}">
         <table class="job-listing">
             <tr>
-                <th>ID</th>
+                <th th:text="${#strings.toUpperCase('id')}">id</th>
                 <td th:text="${job.getId()}">ID Value</td>
             </tr>
             <tr>
-                <th>Name</th>
+                <th th:text="${#strings.capitalizeWords('name')}">name</th>
                 <td th:text="${job.getName()}">Name Value</td>
             </tr>
             <tr>
-                <th>Employer</th>
+                <th th:text="${#strings.capitalizeWords('employer')}">employer</th>
                 <td th:text="${job.getEmployer()}">Employer Value</td>
             </tr>
             <tr>
-                <th>Location</th>
+                <th th:text="${#strings.capitalizeWords('location')}">location</th>
                 <td th:text="${job.getLocation()}">Location Value</td>
             </tr>
             <tr>
-                <th>Position Type</th>
+                <th th:text="${#strings.capitalizeWords('position type')}">position type</th>
                 <td th:text="${job.getPositionType()}">Position Value</td>
             </tr>
             <tr>
-                <th>Skill</th>
+                <th th:text="${#strings.capitalizeWords('skill')}">skill</th>
                 <td th:text="${job.getCoreCompetency()}">Core Competency Value</td>
             </tr>
         </table>

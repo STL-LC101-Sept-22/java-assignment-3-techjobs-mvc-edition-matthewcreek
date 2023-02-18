@@ -8,14 +8,24 @@ td, th {
 
 th {
     text-align: center;
+    font-weight: bold;
+    font-family: Lucida Sans Unicode;
+    color: #800000;
 }
 
 td {
     vertical-align: top;
+    font-style: italic;
+    font-family: Georgia;
+    color: #000080;
 }
 
 tr:nth-child(odd) {
     background-color: #e4e4e4;
+}
+
+tr:hover th, tr:hover td {
+    background-color: #808080;
 }
 
 .centeredTable {
