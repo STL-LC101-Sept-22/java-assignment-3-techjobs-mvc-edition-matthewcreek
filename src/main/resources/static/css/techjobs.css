@@ -24,7 +24,7 @@ tr:nth-child(odd) {
     background-color: #e4e4e4;
 }
 
-tr:hover th, tr:hover td {
+.listing-row:hover th, .listing-row:hover td {
     background-color: #808080;
 }
 

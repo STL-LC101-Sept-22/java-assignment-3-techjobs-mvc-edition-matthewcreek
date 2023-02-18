@@ -29,29 +29,37 @@
     <div th:fragment="job-list">
     <th:block th:each="job : ${jobs}">
         <table class="job-listing">
-            <tr>
+            <tr class="listing-row">
                 <th th:text="${#strings.toUpperCase('id')}">id</th>
-                <td th:text="${job.getId()}">ID Value</td>
+                <td th:text="${job.getId()}"><td>
             </tr>
-            <tr>
+            <tr class="listing-row">
                 <th th:text="${#strings.capitalizeWords('name')}">name</th>
                 <td th:text="${job.getName()}">Name Value</td>
             </tr>
-            <tr>
+            <tr class="listing-row">
                 <th th:text="${#strings.capitalizeWords('employer')}">employer</th>
-                <td th:text="${job.getEmployer()}">Employer Value</td>
+                <td>
+                    <a th:text="${job.getEmployer()}" th:href="@{/list/jobs(column=${'employer'},value=${job.getEmployer()})}">Employer Value</a>
+                </td>
             </tr>
-            <tr>
+            <tr class="listing-row">
                 <th th:text="${#strings.capitalizeWords('location')}">location</th>
-                <td th:text="${job.getLocation()}">Location Value</td>
+                <td>
+                    <a th:text="${job.getLocation()}" th:href="@{/list/jobs(column=${'location'},value=${job.getLocation()})}">Location Value</a>
+                </td>
             </tr>
-            <tr>
+            <tr class="listing-row">
                 <th th:text="${#strings.capitalizeWords('position type')}">position type</th>
-                <td th:text="${job.getPositionType()}">Position Value</td>
+                <td>
+                    <a th:text="${job.getPositionType()}" th:href="@{/list/jobs(column=${'positionType'},value=${job.getPositionType()})}">Position Value</a>
+                </td>
             </tr>
-            <tr>
+            <tr class="listing-row">
                 <th th:text="${#strings.capitalizeWords('skill')}">skill</th>
-                <td th:text="${job.getCoreCompetency()}">Core Competency Value</td>
+                <td >
+                    <a th:text="${job.getCoreCompetency()}" th:href="@{/list/jobs(column=${'coreCompetency'},value=${job.getCoreCompetency()})}">Core Competency Value</a>
+                </td>
             </tr>
         </table>
     </th:block>
