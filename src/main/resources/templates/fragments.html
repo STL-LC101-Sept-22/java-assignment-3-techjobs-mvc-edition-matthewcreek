@@ -34,7 +34,7 @@
         <table class="job-listing">
             <tr class="listing-row">
                 <th th:text="${#strings.toUpperCase('id')}">id</th>
-                <td th:text="${job.getId()}"><td>
+                <td th:text="${job.getId()}"></td>
             </tr>
             <tr class="listing-row">
                 <th th:text="${#strings.capitalizeWords('name')}">name</th>
@@ -45,24 +45,28 @@
                 <td>
                     <a th:text="${job.getEmployer()}" th:href="@{/list/jobs(column=${'employer'},value=${job.getEmployer()})}">Employer Value</a>
                 </td>
+<!--                <td th:text="${job.getEmployer()}" style="visibility:hidden">test</td>-->
             </tr>
             <tr class="listing-row">
                 <th th:text="${#strings.capitalizeWords('location')}">location</th>
                 <td>
                     <a th:text="${job.getLocation()}" th:href="@{/list/jobs(column=${'location'},value=${job.getLocation()})}">Location Value</a>
                 </td>
+<!--                <td th:text="${job.getLocation()}" style="visibility:hidden">test</td>-->
             </tr>
             <tr class="listing-row">
                 <th th:text="${#strings.capitalizeWords('position type')}">position type</th>
                 <td>
                     <a th:text="${job.getPositionType()}" th:href="@{/list/jobs(column=${'positionType'},value=${job.getPositionType()})}">Position Value</a>
                 </td>
+<!--                <td th:text="${job.getPositionType()}" style="visibility:hidden">test</td>-->
             </tr>
             <tr class="listing-row">
                 <th th:text="${#strings.capitalizeWords('skill')}">skill</th>
-                <td >
+                <td>
                     <a th:text="${job.getCoreCompetency()}" th:href="@{/list/jobs(column=${'coreCompetency'},value=${job.getCoreCompetency()})}">Core Competency Value</a>
                 </td>
+<!--                <td th:text="${job.getCoreCompetency()}" style="visibility:hidden">test</td>-->
             </tr>
         </table>
     </th:block>
